@@ -4,7 +4,7 @@
     url_username: "{{ vmax_user }}"
     url_password: "{{ vmax_password }}"
     method: POST
-    body: "{{  }}"
+    body: "{{ lookup('file','internal/tower_license.json') }}"
     body_format: json
     validate_certs: False
   register: results
