@@ -1,0 +1,10 @@
+- name: connect to server using rest api
+  uri:
+    url: "{{ vmax_rest_api }}"
+    url_username: "{{ vmax_user }}"
+    url_password: "{{ vmax_password }}"
+    method: POST
+    body: "{{  }}"
+    body_format: json
+    validate_certs: False
+  register: results

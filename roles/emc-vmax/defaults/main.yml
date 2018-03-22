@@ -1,0 +1,6 @@
+# default values
+
+vmax_user: user
+vmax_password: password
+vmax_rest_api_url: xxx
+

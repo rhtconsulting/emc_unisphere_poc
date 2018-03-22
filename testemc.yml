@@ -1,0 +1,9 @@
+---
+- hosts: all
+  roles:
+    - emc-vmax
+
+  pre_tasks:
+    - name: ping server
+      ping:
+
