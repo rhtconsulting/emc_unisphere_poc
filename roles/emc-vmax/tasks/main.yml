@@ -1,3 +1,15 @@
+- name: Get VMAX Unisphere version number
+  uri:
+    url: "{{ vmax_rest_api }}"/system/version
+    url_username: "{{ vmax_user }}"
+    url_password: "{{ vmax_password }}"
+    method: GET
+    validate_certs: False
+  register: version_results
+
+- debug:
+    var: version_results
+
 - name: connect to server using rest api
   uri:
     url: "{{ vmax_rest_api }}"
